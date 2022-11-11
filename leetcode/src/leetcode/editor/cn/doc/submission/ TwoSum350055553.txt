@@ -1,0 +1,23 @@
+
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int> p;
+        vector<int> res;
+        for(int i = 0 ; i < nums.size();i++){
+            if(p.find(target-nums[i]) != p.end()){
+                res.push_back(p[target-nums[i]]);
+                res.push_back(i);
+                
+                break;
+            }else{
+                p.insert(pair<int,int>(nums[i],i));
+            }
+        }
+       
+        return res;
+    }
+};
+//runtime:0 ms
+//memory:10.7 MB

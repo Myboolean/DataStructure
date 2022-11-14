@@ -60,6 +60,8 @@ class Solution {
         int left = 0 , right = 0, res = 0;
         while( right < s.length()){
             char c = s.charAt(right);
+//            s.substring(0);
+//            s.toString()
             right++;
             window.put(c, window.getOrDefault(c, 0) + 1);
             while(window.get(c) > 1){

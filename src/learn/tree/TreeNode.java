@@ -9,19 +9,20 @@ import java.util.List;
  * Date: 2022/9/21
  * Time: 17:22
  */
-public class DifferenceBinarySearchTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
+public class TreeNode {
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
+    TreeNode() {}
+    public TreeNode(int val) { this.val = val; }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
+}
+class DifferenceBinarySearchTree {
+
     public List<TreeNode> generateTrees(int n) {
         if(n == 0){
             List<TreeNode> list = new LinkedList<>();

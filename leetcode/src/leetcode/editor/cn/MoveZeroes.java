@@ -47,7 +47,17 @@ public class MoveZeroes{
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public void moveZeroes(int[] nums) {
-
+        int slow  = 0 , fast = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if(nums[fast] != 0) {
+                nums[slow] = nums[fast];
+                slow++;
+            }
+            fast++;
+        }
+        for (int i = slow; i < nums.length; i++) {
+            nums[i] = 0;
+        }
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
